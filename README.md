@@ -1,4 +1,4 @@
-# Bluetooth-home-automation-with-on-board-communication RTL synthesis using YOSYS
+# Bluetooth communication RTL synthesis using YOSYS
 I will be giving pictures for all the steps in my system
 
 1. **Install Icarus Verilog:**
@@ -229,20 +229,24 @@ After visualizing the RTL sketch using the `show` command, the next steps involv
 
 By executing these commands, you'll create Verilog output files that represent the synthesized design. These files can be used for further simulation, analysis, and integration into larger systems.
 
+- exit the yosys and runt the below command to make generate vcd file for the generated netlist
+   ```bash
+   iverilog netlist_test.v ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd_edited.v
+   ```
+- now open the gtk wave with generated vcd file to get the synthesized output waveforms
+  
+## Waveforms after synthesise
 
+![postsyn](https://github.com/Karthik7090ps/Bluetooth-home-automation-with-on-board-communication/assets/110128289/0cdbfd28-9904-4d71-96de-f1690be35a3f)
 
-
-
-
-
-
+## Logics Behing the code and more
 this code is used to establish successfull communication between smartphone and the main DIGITAL Logic device.
 This code can be used for 
 - making home automation
 - Automating things or Devices that uses Bluetooth communication
 - establishing communication between any device using UART protocol
 The communication can be explained in these 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600, 1000000, 1500000 baudrates
-## Design or coding Requirements (for establishing communication)
+## Design Requirements (for establishing communication)
 The considerations before establishing good and reliable communications are discussed below
 
 ### UART Receiver Hardware Design
