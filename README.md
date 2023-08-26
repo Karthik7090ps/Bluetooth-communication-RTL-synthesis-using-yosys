@@ -45,6 +45,7 @@ I will be giving pictures for all the steps in my system
    ```bash
    gtkwave <module.vcd>
    ```
+   
    **note:** vcd file will not be generated if dumpvars is not declared in the testbench.
    example:
    
@@ -55,10 +56,12 @@ Replace `<module.v>` and `<module_tb.v>` with your actual Verilog module and tes
 
 ![Screenshot from 2023-08-26 01-35-44](https://github.com/Karthik7090ps/Bluetooth-home-automation-with-on-board-communication/assets/110128289/df8dea2e-bcf7-46b2-8d71-5040935e5d27)
 
+
 ## TIP: Note the path of the library file in prior for further uses
   ```bash
    readlink -f <libraryname>  // in the current path
    ```
+
 ## Synthesize Using Yosys 
 
 After obtaining the full path of your Verilog files and simulating them, the next step is synthesis using Yosys. Here's what you need to do:
@@ -74,6 +77,7 @@ After obtaining the full path of your Verilog files and simulating them, the nex
    ```bash
    read_verilog <module.v>
    ```
+   
    Replace `module.v` with the name of your verilog synthesis script.
 
 4. **Read Liberty File:**
